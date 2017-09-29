@@ -149,6 +149,18 @@
 		EAEF21EF1F7E2D150069E001 /* VXXScreenshotsShareView */ = {
 			isa = PBXGroup;
 			children = (
+				EAEF22031F7E30F80069E001 /* Tools */,
+				EAEF21F01F7E2D150069E001 /* ScreenShotsTool.h */,
+				EAEF21F11F7E2D150069E001 /* ScreenShotsTool.m */,
+				EAEF21F21F7E2D150069E001 /* VXXScreenshotsManager.swift */,
+				EAEF21F31F7E2D150069E001 /* VXXScreenshotsView.swift */,
+			);
+			path = VXXScreenshotsShareView;
+			sourceTree = "<group>";
+		};
+		EAEF22031F7E30F80069E001 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
 				EAEF22001F7E2FEE0069E001 /* UIImage+Rotate.h */,
 				EAEF22011F7E2FEE0069E001 /* UIImage+Rotate.m */,
 				EAEF21FD1F7E2F850069E001 /* UIView+Extension.h */,
@@ -156,12 +168,8 @@
 				EAEF21FB1F7E2F370069E001 /* CGFloat+VXX.swift */,
 				EAEF21F81F7E2EAC0069E001 /* UIColor+Hex.h */,
 				EAEF21F91F7E2EAC0069E001 /* UIColor+Hex.m */,
-				EAEF21F01F7E2D150069E001 /* ScreenShotsTool.h */,
-				EAEF21F11F7E2D150069E001 /* ScreenShotsTool.m */,
-				EAEF21F21F7E2D150069E001 /* VXXScreenshotsManager.swift */,
-				EAEF21F31F7E2D150069E001 /* VXXScreenshotsView.swift */,
 			);
-			path = VXXScreenshotsShareView;
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

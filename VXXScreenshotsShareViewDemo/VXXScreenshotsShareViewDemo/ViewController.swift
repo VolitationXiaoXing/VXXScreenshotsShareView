@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
        
         
-        
+        VXXScreenshotsManager.instance.startScreenshotsListening()
         
         
     }
