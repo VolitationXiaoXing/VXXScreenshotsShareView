@@ -14,6 +14,13 @@
 		EAEF21C81F7E2B0F0069E001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAEF21C61F7E2B0F0069E001 /* LaunchScreen.storyboard */; };
 		EAEF21D31F7E2B0F0069E001 /* VXXScreenshotsShareViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEF21D21F7E2B0F0069E001 /* VXXScreenshotsShareViewDemoTests.swift */; };
 		EAEF21DE1F7E2B0F0069E001 /* VXXScreenshotsShareViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEF21DD1F7E2B0F0069E001 /* VXXScreenshotsShareViewDemoUITests.swift */; };
+		EAEF21F41F7E2DA20069E001 /* VXXScreenshotsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEF21F21F7E2D150069E001 /* VXXScreenshotsManager.swift */; };
+		EAEF21F51F7E2DA20069E001 /* VXXScreenshotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEF21F31F7E2D150069E001 /* VXXScreenshotsView.swift */; };
+		EAEF21F71F7E2DA80069E001 /* ScreenShotsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEF21F11F7E2D150069E001 /* ScreenShotsTool.m */; };
+		EAEF21FA1F7E2EAC0069E001 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEF21F91F7E2EAC0069E001 /* UIColor+Hex.m */; };
+		EAEF21FC1F7E2F370069E001 /* CGFloat+VXX.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEF21FB1F7E2F370069E001 /* CGFloat+VXX.swift */; };
+		EAEF21FF1F7E2F850069E001 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEF21FE1F7E2F850069E001 /* UIView+Extension.m */; };
+		EAEF22021F7E2FEE0069E001 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEF22011F7E2FEE0069E001 /* UIImage+Rotate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,17 @@
 		EAEF21DD1F7E2B0F0069E001 /* VXXScreenshotsShareViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VXXScreenshotsShareViewDemoUITests.swift; sourceTree = "<group>"; };
 		EAEF21DF1F7E2B0F0069E001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAEF21EB1F7E2B1E0069E001 /* VXXScreenshotsShareViewDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VXXScreenshotsShareViewDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		EAEF21F01F7E2D150069E001 /* ScreenShotsTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenShotsTool.h; sourceTree = "<group>"; };
+		EAEF21F11F7E2D150069E001 /* ScreenShotsTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenShotsTool.m; sourceTree = "<group>"; };
+		EAEF21F21F7E2D150069E001 /* VXXScreenshotsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VXXScreenshotsManager.swift; sourceTree = "<group>"; };
+		EAEF21F31F7E2D150069E001 /* VXXScreenshotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VXXScreenshotsView.swift; sourceTree = "<group>"; };
+		EAEF21F81F7E2EAC0069E001 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		EAEF21F91F7E2EAC0069E001 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		EAEF21FB1F7E2F370069E001 /* CGFloat+VXX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+VXX.swift"; sourceTree = "<group>"; };
+		EAEF21FD1F7E2F850069E001 /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		EAEF21FE1F7E2F850069E001 /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		EAEF22001F7E2FEE0069E001 /* UIImage+Rotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		EAEF22011F7E2FEE0069E001 /* UIImage+Rotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +116,7 @@
 		EAEF21BC1F7E2B0F0069E001 /* VXXScreenshotsShareViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EAEF21EF1F7E2D150069E001 /* VXXScreenshotsShareView */,
 				EAEF21BD1F7E2B0F0069E001 /* AppDelegate.swift */,
 				EAEF21BF1F7E2B0F0069E001 /* ViewController.swift */,
 				EAEF21C11F7E2B0F0069E001 /* Main.storyboard */,
@@ -125,6 +144,24 @@
 				EAEF21DF1F7E2B0F0069E001 /* Info.plist */,
 			);
 			path = VXXScreenshotsShareViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		EAEF21EF1F7E2D150069E001 /* VXXScreenshotsShareView */ = {
+			isa = PBXGroup;
+			children = (
+				EAEF22001F7E2FEE0069E001 /* UIImage+Rotate.h */,
+				EAEF22011F7E2FEE0069E001 /* UIImage+Rotate.m */,
+				EAEF21FD1F7E2F850069E001 /* UIView+Extension.h */,
+				EAEF21FE1F7E2F850069E001 /* UIView+Extension.m */,
+				EAEF21FB1F7E2F370069E001 /* CGFloat+VXX.swift */,
+				EAEF21F81F7E2EAC0069E001 /* UIColor+Hex.h */,
+				EAEF21F91F7E2EAC0069E001 /* UIColor+Hex.m */,
+				EAEF21F01F7E2D150069E001 /* ScreenShotsTool.h */,
+				EAEF21F11F7E2D150069E001 /* ScreenShotsTool.m */,
+				EAEF21F21F7E2D150069E001 /* VXXScreenshotsManager.swift */,
+				EAEF21F31F7E2D150069E001 /* VXXScreenshotsView.swift */,
+			);
+			path = VXXScreenshotsShareView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEF21F71F7E2DA80069E001 /* ScreenShotsTool.m in Sources */,
+				EAEF21FC1F7E2F370069E001 /* CGFloat+VXX.swift in Sources */,
+				EAEF21FA1F7E2EAC0069E001 /* UIColor+Hex.m in Sources */,
+				EAEF21F41F7E2DA20069E001 /* VXXScreenshotsManager.swift in Sources */,
+				EAEF21F51F7E2DA20069E001 /* VXXScreenshotsView.swift in Sources */,
 				EAEF21C01F7E2B0F0069E001 /* ViewController.swift in Sources */,
+				EAEF21FF1F7E2F850069E001 /* UIView+Extension.m in Sources */,
 				EAEF21BE1F7E2B0F0069E001 /* AppDelegate.swift in Sources */,
+				EAEF22021F7E2FEE0069E001 /* UIImage+Rotate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GCFW8EF2TE;
 				INFOPLIST_FILE = VXXScreenshotsShareViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = volitationxiaoxing.VXXScreenshotsShareViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GCFW8EF2TE;
 				INFOPLIST_FILE = VXXScreenshotsShareViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = volitationxiaoxing.VXXScreenshotsShareViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
