@@ -18,6 +18,8 @@ class VXXScreenshotsView: UIView {
     var shareBtns:[VXXShareBtn]
     var line = UIView()
     var label = UILabel()
+    
+    var isPortrait = false
 
     init(superV:UIView,shareBtns:[VXXShareBtn]) {
         self.superV = superV
@@ -65,14 +67,31 @@ class VXXScreenshotsView: UIView {
     
     func setUI(){
         
-        self.mainView.height = CGFloatAutoFit(320)
-        self.mainView.width = VXXFloat.CGFloatAutoFit(370)
-        self.mainView.center = CGPoint(x: self.superV.width * 0.5, y: self.superV.height * 0.5)
+        self.frame = superV.bounds
         
-        self.imageView.height = VXXFloat.CGFloatAutoFit(190)
-        self.imageView.width = VXXFloat.CGFloatAutoFit(350)
-        self.imageView.x = VXXFloat.CGFloatAutoFit(10)
-        self.imageView.y = VXXFloat.CGFloatAutoFit(10)
+        if isPortrait {
+            
+            self.mainView.height = CGFloatAutoFit(520)
+            self.mainView.width = VXXFloat.CGFloatAutoFit(320)
+            self.mainView.center = CGPoint(x: self.superV.width * 0.5, y: self.superV.height * 0.5)
+            
+            self.imageView.height = VXXFloat.CGFloatAutoFit(395)
+            self.imageView.width = self.mainView.width - CGFloatAutoFit(20)
+            self.imageView.x = VXXFloat.CGFloatAutoFit(10)
+            self.imageView.y = VXXFloat.CGFloatAutoFit(10)
+            
+        }else{
+            
+            self.mainView.height = CGFloatAutoFit(320)
+            self.mainView.width = VXXFloat.CGFloatAutoFit(370)
+            self.mainView.center = CGPoint(x: self.superV.width * 0.5, y: self.superV.height * 0.5)
+            
+            self.imageView.height = VXXFloat.CGFloatAutoFit(190)
+            self.imageView.width = VXXFloat.CGFloatAutoFit(350)
+            self.imageView.x = VXXFloat.CGFloatAutoFit(10)
+            self.imageView.y = VXXFloat.CGFloatAutoFit(10)
+            
+        }
         
         self.shareview.x = 0
         self.shareview.y = self.imageView.height + self.imageView.y + 20

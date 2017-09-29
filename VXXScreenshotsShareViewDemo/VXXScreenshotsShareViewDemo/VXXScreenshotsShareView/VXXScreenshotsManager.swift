@@ -24,14 +24,21 @@ class VXXScreenshotsManager: NSObject {
     weak var delegate:VXXScreenshotsDelegate?
     
    private override init() {
-        
+        super.init()
+    
+
     }
+    
+    var screenshots:VXXScreenshotsView?
     
     //截屏
     var superView:UIView?
     
     //开启截屏监听
     func startScreenshotsListening(){
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changeRotate(noti:)), name: NSNotification.Name.UIApplicationDidChangeStatusBarFrame, object: nil)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(VXXScreenshotsManager.userDidTakeScreenshot(notification:)), name: NSNotification.Name.UIApplicationUserDidTakeScreenshot, object: nil)
     }
     
@@ -56,15 +63,48 @@ class VXXScreenshotsManager: NSObject {
         }
         
         var screenshots = VXXScreenshotsView(superV: window!, shareBtns: shareBtns)
+        
+        self.screenshots = screenshots
+        
         if superView != nil {
             screenshots = VXXScreenshotsView(superV: superView!, shareBtns: shareBtns)
         }
         
-        self.image = (image?.imageRotated(byDegrees: 90))!
+        if UIDevice.current.orientation == .portrait || UIDevice.current.orientation == .portraitUpsideDown {
+            //竖屏
+            screenshots.isPortrait = true
+            screenshots.imageView.image = image
+        }else{
+            //横屏
+            screenshots.isPortrait = false
+            self.image = (image?.imageRotated(byDegrees: 90))!
+            screenshots.imageView.image = image?.imageRotated(byDegrees: 90)
+        }
         
-        screenshots.imageView.image = image?.imageRotated(byDegrees: 90)
+        //重新布局
+        screenshots.setUI()
         
         window?.addSubview(screenshots)
+        
+    }
+    
+    @objc func changeRotate(noti:NSNotification){
+       
+        if UIDevice.current.orientation == .portrait || UIDevice.current.orientation == .portraitUpsideDown {
+            //竖屏
+            self.screenshots?.isPortrait = true
+            UIView.animate(withDuration: 0.25, animations: {
+                self.screenshots?.setUI()
+            })
+            
+            
+        }else{
+            //横屏
+            self.screenshots?.isPortrait = false
+            UIView.animate(withDuration: 0.25, animations: {
+                self.screenshots?.setUI()
+            })
+        }
         
     }
     
